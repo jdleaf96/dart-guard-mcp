@@ -5,3 +5,4 @@ data/
 logs/
 *.sqlite3*
 .mcp.json
+기획서.md
