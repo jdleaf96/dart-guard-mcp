@@ -1,0 +1,28 @@
+[project]
+name = "dart-guard-mcp"
+version = "0.1.0"
+description = "DART(전자공시) MCP 서버 — 읽기 전용·출처 필수·프롬프트 인젝션 방어 설계"
+authors = [
+    { name = "J-DLEAF", email = "59589133+J-DLEAF@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "defusedxml>=0.7.1",
+    "httpx>=0.28.1",
+    "mcp[cli]>=2.3.0",
+    "numpy>=2.5.4",
+    "pydantic>=2.14.2",
+    "sentence-transformers>=6.2.0",
+]
+
+[project.scripts]
+dart-guard-mcp = "dart_guard_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
